@@ -21,3 +21,6 @@ Route::get('/contact', function () {
     return view('contact');
 });
 Route::post('/contact/submit','MessagesController@submit');
+
+Route::get('/register', 'RegistrationController@create');
+Route::post('register', 'RegistrationController@store');
