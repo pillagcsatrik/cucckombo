@@ -9,7 +9,18 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">{{ auth()->user()->name }}</a>
             </li>
-      @endif          
+            <li class="nav-item">
+                <a class="nav-link" href="logout">Logout</a>
+            </li>
+
+        @else
+            <li class="nav-item">
+                <a class="nav-link" href="login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register">Register</a>
+            </li>
+      @endif
     </ul>
   </div>
 </nav>
