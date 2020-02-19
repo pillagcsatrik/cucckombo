@@ -28,3 +28,11 @@ Route::post('register', 'RegistrationController@store');
 Route::get('/login','SessionController@create');
 Route::post('/login','SessionController@store');
 Route::get('/logout','SessionController@destroy');
+
+use App\Mail\lel;
+
+$user = \Auth::loginUsingId(1);
+
+Route::get('testemail', function () use ($user){
+  \Mail::to($user)->send(new lel($user));
+});
